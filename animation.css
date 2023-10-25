@@ -1,0 +1,27 @@
+.content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+#mainContent {
+    transform: translateY(0);
+}
+
+#chatContent {
+    transform: translateY(100%);
+}
+
+#contactContent {
+    transform: translateY(200%);
+}
+
+#mainContent,
+#chatContent,
+#contactContent {
+    transition: transform 0.3s ease-in-out;
+}

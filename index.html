@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage()">Главная</a></li>
+                <li><a href="#" onclick="showChatPage()">Чат</a></li>
+                <li><a href="#" onclick="showContactPage()">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content" id="mainContent">
+        <h1>Приветствую тебя в MY PROJECT</h1>
+        <p>Это главная страница</p>
+    </div>
+
+    <script>
+        function showPage() {
+            document.getElementById("mainContent").innerHTML = `
+            <div id="mainContent" class="content main-page">
+                <h1>Приветствую тебя в MY PROJECT!</h1>
+                <p>Это главная страница</p>
+                    <button class="cta-button" onclick="showChatPage()">Перейти к чату</button>
+            </div>
+            `;
+        }
+
+        function showChatPage() {
+            document.getElementById("mainContent").innerHTML = `
+            <div id="chatContent" class="content chat-page">
+                <h1>Чат</h1>
+                <div class="chat-container">
+                    <div class="chat-messages">
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" placeholder="Введите сообщение" id="message-input" onfocus="showMessageTip()">
+                        <div class="message-tip">Напишите ваше сообщение</div>
+                        <button onclick="sendMessage()">Отправить</button>
+                    </div>
+                </div>
+                </div>
+            `;
+        }
+
+        function showContactPage() {
+            document.getElementById("mainContent").innerHTML = `
+            <div id="contactContent" class="content contact-page">
+                <h1>Контакты</h1>
+                <div class="contact-list">
+                    <div class="contact">
+                        <img src="avatar1.jpg" alt="Контакт 1">
+                        <h2>Ваструков Вадим Витальевич</h2>
+                        <p>Email: vadim.vastrukov@mail.ru</p>
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
